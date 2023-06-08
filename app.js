@@ -6,12 +6,15 @@ let nombreUsuario;
 let contrasenia;
 let edad;
 
+function registroCorrecto(){
+    alert("Se introducio un dato correcto... Gracias!!")
+}
 
 // Se pide nombre de usuario
 
 nombreUsuario = prompt("Ingrese nombre de usuario");
 if (nombreUsuario != '') {
-
+    registroCorrecto()
 } else {
     nombreUsuario = prompt("Por favor ingresar un nombre de usuario...");
     
@@ -23,6 +26,7 @@ if (nombreUsuario != '') {
 contrasenia = prompt("Ingrese la contraseña");
 if (contrasenia != '') {
     console.log("verificando logeo");
+    registroCorrecto()
 } else {
     contrasenia = prompt("Por favor ingresa una contrasena");
 }
@@ -33,7 +37,8 @@ if (contrasenia != '') {
 
 edad = prompt("Por favot ingrese su edad ")
 if (edad != Number) {
-    console.log("se completo el registro correctamente")
+    registroCorrecto()
+
 } else {
     edad= prompt("Por favor ingrese un caracter")
 }
