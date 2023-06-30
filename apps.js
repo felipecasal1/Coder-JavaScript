@@ -1,35 +1,34 @@
 
-// let nombreUsuario;
-// let contrasenia;
-// let edad;
-// function registroCorrecto(){
-//     alert("Se introducio un dato correcto... Gracias!!")
-// }
-// nombreUsuario = prompt("Ingrese nombre de usuario");
-// if (nombreUsuario != '') {
-//     registroCorrecto()
-// } else {
-//     nombreUsuario = prompt("Por favor ingresar un nombre de usuario...");
-// }
-// contrasenia = prompt("Ingrese la contraseña");
-// if (contrasenia != '') {
-//     console.log("verificando logeo");
-//     registroCorrecto()
-// } else {
-//     contrasenia = prompt("Por favor ingresa una contrasena");
-// }
-// edad = prompt("Por favot ingrese su edad ")
-// if (edad != Number) {
-//     registroCorrecto()
-// } else {
-//     edad= prompt("Por favor ingrese un caracter")
-
-//  }
-// const bicicletas =[
-// {nombre: "Bicicleta DownHill" ,marca:"Venzo" ,precio: 500 ,n:0 },
-// {nombre: "Bicicleta Mountainbike" ,marca:"Top Mega" ,precio: 750 ,n:1},
-// {nombre: "Bicicleta CrossCountry" ,marca:"Trinx" ,precio: 600 ,n:2},
-// ]
+ let nombreUsuario;
+ let contrasenia;
+ let edad;
+ function registroCorrecto(){
+     alert("Se introducio un dato correcto... Gracias!!")
+ }
+ nombreUsuario = prompt("Ingrese nombre de usuario");
+ if (nombreUsuario != '') {
+     registroCorrecto()
+ } else {
+     nombreUsuario = prompt("Por favor ingresar un nombre de usuario...");
+ }
+ contrasenia = prompt("Ingrese la contraseña");
+ if (contrasenia != '') {
+     console.log("verificando logeo");
+     registroCorrecto()
+ } else {
+     contrasenia = prompt("Por favor ingresa una contrasena");
+ }
+ edad = prompt("Por favot ingrese su edad ")
+ if (edad != Number) {
+     registroCorrecto()
+ } else {
+     edad= prompt("Por favor ingrese un caracter")
+  }
+ const bicicletas =[
+ {nombre: "Bicicleta DownHill" ,marca:"Venzo" ,precio: 500 ,n:0 },
+ {nombre: "Bicicleta Mountainbike" ,marca:"Top Mega" ,precio: 750 ,n:1},
+ {nombre: "Bicicleta CrossCountry" ,marca:"Trinx" ,precio: 600 ,n:2},
+ ]
 
 
 let carrito = document.getElementById("carrito")
