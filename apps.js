@@ -25,32 +25,77 @@
 //     edad= prompt("Por favor ingrese un caracter")
 
 //  }
-let bicicleta1 = ("Bicicleta Mountainbike", "Top Mega", 750)
-let bicicleta2 =  ("Bicicleta CerroArriba", "Raleigh", 900)
-let bicicleta3 = ("Bicicleta BMX", "Olmo", 400)
-let bicicleta4 =  ("Bicicleta DownHill", "Venzo", 500)
+// const bicicletas =[
+// {nombre: "Bicicleta DownHill" ,marca:"Venzo" ,precio: 500 ,n:0 },
+// {nombre: "Bicicleta Mountainbike" ,marca:"Top Mega" ,precio: 750 ,n:1},
+// {nombre: "Bicicleta CrossCountry" ,marca:"Trinx" ,precio: 600 ,n:2},
+// ]
+
 
 let carrito = document.getElementById("carrito")
 
 let botonBorrar = document.getElementById("borrar")
 let boton = document.querySelector("#miBoton");
 
-boton.onclick = () =>{
-     const elemento = `
-     <td>Bicicleta BMX</td>
-     <td>Marca  Olmo</td>
-     <td>$400.00</td>
-     <td>4</td>
-    `
-    carrito.innerHTML += elemento
-    alert("Agregaste un elemento al carrito")}
 
-    botonBorrar.onclick = () =>{
-        const elemento = `
-        <td>Bicicleta BMX</td>
-        <td>Marca  Olmo</td>
-        <td>$400.00</td>
-        <td>4</td>
-       `
-       carrito.innerHTML -= elemento
-       alert("Agregaste un elemento al carrito")}
+boton.onclick = () => {
+    let opcion = prompt("ingrese el N de producto")
+    switch (opcion) {
+        case "0":
+            let bicicleta1 = `
+            <td>Bicicleta Mountainbike</td>
+        <td>Marca Top Mega</td>
+        <td>$750.00</td>
+        `
+            carrito.innerHTML += bicicleta1
+
+break;
+        case "1":
+            let bicicleta2 = `
+            <td>Bicicleta Mountainbike</td>
+            <td>Marca Top Mega</td>
+            <td>$750.00</td>`
+            carrito.innerHTML += bicicleta2
+            break;
+        case "2":
+            let bicicleta3 = `
+             <td>Bicicleta CrossCountry</td>
+            <td>Marca Trinx</td>
+            <td>$600.00</td>`
+            carrito.innerHTML += bicicleta3
+            break;
+        case "3":
+            let bicicleta4 = `
+            <td>Bicicleta CerroArriba</td>
+        <td>Marca Raleigh</td>
+        <td>$900.00</td>`
+            carrito.innerHTML += bicicleta4
+            break;
+        case "4":
+            let bicicleta5 = `    
+                            <td>Bicicleta BMX</td>
+                <td>Marca Olmo</td>
+                <td>$400.00</td>
+                
+                `
+                carrito.innerHTML += bicicleta5
+    }
+
+
+
+
+    alert("Agregaste un elemento al carrito")
+}
+
+botonBorrar.onclick = () => {
+    elemento = `
+    <td></td>
+                <td></td>
+                <td></td>
+                
+    `
+
+
+    carrito.innerHTML -= elemento
+    alert("Borraste el carrito")
+}
