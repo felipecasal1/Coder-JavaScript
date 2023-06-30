@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="esm--">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
     <title>Carrito</title>
 </head>
@@ -44,13 +43,14 @@
                 <td>1</td>
             </tr>
 
-            <tr>
+            <tr class="bicicrosscountry">
+
                 <td>Bicicleta CrossCountry</td>
                 <td>Marca Trinx</td>
                 <td>$600.00</td>
                 <td>2</td>
-            </tr>
 
+            </tr>
             <tr>
                 <td>Bicicleta CerroArriba</td>
                 <td>Marca Raleigh</td>
@@ -60,7 +60,7 @@
 
             <tr>
                 <td>Bicicleta BMX</td>
-                <td>Marca  Olmo</td>
+                <td>Marca Olmo</td>
                 <td>$400.00</td>
                 <td>4</td>
             </tr>
@@ -68,12 +68,12 @@
     </table>
 
 
-
+<hr>
 
     <H2>Carrito de Compras</H2>
 
     <table>
-        <thead>
+        <thead id="carrito">
             <tr>
                 <th>Producto</th>
                 <th>Marca</th>
@@ -89,11 +89,13 @@
                 <td></td>
                 <td></td>
             </tr>
-<div class="flex">
-    <button class="Boton-carrito " id="miBoton">Agregar Al Carrito</button>
-</div>
+            <div class="flex">
+                <button class="Boton-carrito " id="miBoton">Agregar Al Carrito</button>
+                <button class="boton-borrar" id="borrar">Eliminar Producto</button>
+            </div>
 </body>
 
-<script src="./app.js"> </script>
+
+<script src="./apps.js"></script>
 
 </html>

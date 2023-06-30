@@ -14,12 +14,12 @@ table {
   }
 
   .Boton-carrito{
-    background-color: red;
+    background-color: green;
     color: black;
-    width: 400px;
+    width: 250px;
     height: 40px;
     display: flex;
-    font-size: 2rem;
+    font-size: 26px;
 
   }
   .flex{
@@ -27,5 +27,16 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: end;
    
+
+  }
+  .boton-borrar{
+    background-color: red;
+    color: black;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    font-size: 27px;
+text-align: center;
   }
