@@ -87,14 +87,47 @@ break;
 }
 
 botonBorrar.onclick = () => {
-    elemento = `
-    <td></td>
-                <td></td>
-                <td></td>
+    let eliminar =prompt("ingrese el N del producto que quiere eliminar")
+    switch (eliminar) {
+        case "0":
+            let bicicleta1 = `
+            <td>Bicicleta Mountainbike</td>
+        <td>Marca Top Mega</td>
+        <td>$750.00</td>
+        `
+            carrito.innerHTML -= bicicleta1
+
+break;
+        case "1":
+            let bicicleta2 = `
+            <td>Bicicleta Mountainbike</td>
+            <td>Marca Top Mega</td>
+            <td>$750.00</td>`
+            carrito.innerHTML -= bicicleta2
+            break;
+        case "2":
+            let bicicleta3 = `
+             <td>Bicicleta CrossCountry</td>
+            <td>Marca Trinx</td>
+            <td>$600.00</td>`
+            carrito.innerHTML -= bicicleta3
+            break;
+        case "3":
+            let bicicleta4 = `
+            <td>Bicicleta CerroArriba</td>
+        <td>Marca Raleigh</td>
+        <td>$900.00</td>`
+            carrito.innerHTML -= bicicleta4
+            break;
+        case "4":
+            let bicicleta5 = `    
+                            <td>Bicicleta BMX</td>
+                <td>Marca Olmo</td>
+                <td>$400.00</td>
                 
-    `
+                `
+                carrito.innerHTML -= bicicleta5
+    }
 
-
-    carrito.innerHTML -= elemento
-    alert("Borraste el carrito")
+    alert("Borraste un elemento del  carrito")
 }
