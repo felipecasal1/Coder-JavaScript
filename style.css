@@ -90,3 +90,10 @@ background-color: #264653;
 width: 10vb;
 height: 4vb;
 }
+footer{
+  background-color: #e9c46a;
+}
+.carrito.style{
+  background-color: #e9c46a;
+  height: 800px;
+}
