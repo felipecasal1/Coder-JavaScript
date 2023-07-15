@@ -1,35 +1,28 @@
 
 
 
+let form = document.getElementById("form")
+let nombreUsuario = document.getElementById("nombre");
+let contrasenia = document.getElementById("contraseña");
+let edad = document.getElementById("edad");
+form.addEventListener("submit", e=> {
 
-  let nombreUsuario;
-  let contrasenia;
-  let edad;
-  function registroCorrecto(){
-      alert("Se introducio un dato correcto... Gracias!!")    
-  };
-   nombreUsuario = prompt("Ingrese nombre de usuario");
-  if (nombreUsuario != '') {
-      registroCorrecto()    
-  } else {
-      nombreUsuario = prompt("Por favor ingresar un nombre de usuario...")    
-  };
- localStorage.setItem("Nombre",nombreUsuario);
-  contrasenia = prompt("Ingrese la contraseña");
-  if (contrasenia != '') {
-      console.log("verificando logeo");    
-      registroCorrecto()
-  } else {
-      contrasenia = prompt("Por favor ingresa una contrasena")    
-  };
-  localStorage.setItem("contraseña",contrasenia)
-  edad = prompt("Por favot ingrese su edad ");
-  if (edad != Number) {
-      registroCorrecto()    
-  } else {
-      edad= prompt("Por favor ingrese un caracter")
-   };
-   localStorage.setItem("edad",edad)
+    e.preventDefault()
+    
+    console.log(nombreUsuario.value)
+    localStorage.setItem("Nombre",nombreUsuario.value);
+    
+    console.log(contrasenia.value)
+    localStorage.setItem("contraseña",contrasenia.value);
+    
+    console.log(edad.value);
+
+    localStorage.setItem("edad",edad.value);
+    
+    
+} ) 
+
+
 
 
 const bicicletas = [
@@ -111,7 +104,7 @@ boton4.onclick = () =>{
 
 
 
-let boton5 = document.getElementById("boton-5")
+let boton5 = document.getElementById("boton-5");
 
 boton5.onclick = () =>{
     let bicicleta5 = `
@@ -124,9 +117,27 @@ boton5.onclick = () =>{
     carrito.innerHTML += bicicleta5
 }
 
+
+
+let vaciarCarrito = document.getElementById("borrar");
+
+vaciarCarrito.onclick = () =>{
+    let vaciarCarrito = `
+    
+    <td>"</td>
+    <td></td>
+    <td></td>
+   
+    `
+    carrito.innerHTML -= vaciarCarrito
+}
+
+
+
+
 let tituloCarrito = document.getElementById("Carrito-h2")
 
-let titulocarrito =`
-Carrito de Compra de ${localStorage.getItem(JSONparse("nombre"))}
+let nuevoTituloCarrito =`
+Carrito de Compra de ${localStorage.getItem("nombre")}
 `
-tituloCarrito.innerHTML += tituloCarrito
+tituloCarrito.innerHTML += nuevoTituloCarrito

@@ -65,3 +65,28 @@ section{
   background-color: black;
   color: #e76f51;
 }
+
+.formulario{
+  background-color: #e9c46a;
+  width: 40%;
+  height: 500px;
+padding: 20px;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+gap: 20px;
+}
+.flex-form{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4a261;
+}
+.btn-formulario{
+gap: 20px;
+background-color: #264653;
+width: 10vb;
+height: 4vb;
+}
