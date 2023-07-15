@@ -35,9 +35,6 @@ const bicicletas = [
 
 let carrito = document.getElementById("carrito");
 
-
-
-
 let boton1 = document.getElementById("boton-1");
 
 
@@ -52,6 +49,8 @@ let boton1 = document.getElementById("boton-1");
           </tr>
                 `
     carrito.innerHTML += bicicleta1
+console.log(carrito.value)
+    localStorage.setItem("carrito",carrito.value+bicicleta1.value)
 };
 
 
@@ -135,9 +134,3 @@ vaciarCarrito.onclick = () =>{
 
 
 
-let tituloCarrito = document.getElementById("Carrito-h2")
-
-let nuevoTituloCarrito =`
-Carrito de Compra de ${localStorage.getItem("nombre")}
-`
-tituloCarrito.innerHTML += nuevoTituloCarrito
