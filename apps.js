@@ -9,13 +9,13 @@ form.addEventListener("submit", e=> {
 
     e.preventDefault()
     
-    console.log(nombreUsuario.value)
+    
     localStorage.setItem("Nombre",nombreUsuario.value);
     
-    console.log(contrasenia.value)
+    
     localStorage.setItem("contraseña",contrasenia.value);
     
-    console.log(edad.value);
+    
 
     localStorage.setItem("edad",edad.value);
     
@@ -41,16 +41,16 @@ let boton1 = document.getElementById("boton-1");
 
 
  boton1.onclick = () => {
+   
     let bicicleta1 = `
                 <tr>
-            <td>${bicicletas[0].nombre}</td>
+            <td >${bicicletas[0].nombre}</td>
             <td>${bicicletas[0].precio}</td>
             <td>${bicicletas[0].marca}</td>
           </tr>
                 `
     carrito.innerHTML += bicicleta1
-console.log(carrito.value)
-    localStorage.setItem("carrito",carrito.value+bicicleta1.value)
+
 };
 
 
@@ -134,3 +134,14 @@ vaciarCarrito.onclick = () =>{
 
 
 
+let tituloCarrito = document.getElementById("Carrito-h2")
+console.log(tituloCarrito)
+
+form.addEventListener("submit", e=>{
+
+    let nuevoTitulo =` 
+    <H2 id="Carrito-h2">Carrito de Compras de ${nombreUsuario.value}</H2>
+    `
+    tituloCarrito.innerHTML += nuevoTitulo
+    console.log(nuevoTitulo)
+})
