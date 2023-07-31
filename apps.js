@@ -145,3 +145,5 @@ form.addEventListener("submit", e=>{
     tituloCarrito.innerHTML += nuevoTitulo
     console.log(nuevoTitulo)
 })
+
+let borrar
