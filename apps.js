@@ -84,11 +84,11 @@ let carrito = document.getElementById("carrito");
 
 let boton1 = document.getElementById("boton-1");
 
-let carritoLocalStorage = [];
 
 
 
 boton1.onclick = () => {
+
     
     let bicicleta1 = `
     <tr>
@@ -99,9 +99,8 @@ boton1.onclick = () => {
     `
     carrito.innerHTML += bicicleta1
     
-    let carritoLocalStorage = carritoLocalStorage+bicicletas[0].nombre;
    
-    localStorage.setItemItem("carritoLocalSrorage",JSON.stringify(carritoLocalStorage));
+    localStorage.setItem("carritoLocalSrorage"+(bicicletas[0].marca),(bicicletas[0].nombre));
 
 };
 
@@ -120,8 +119,7 @@ boton2.onclick = () => {
           </tr>
           `
     carrito.innerHTML += bicicleta2
-    let carritoLocalStorage = carritoLocalStorage+bicicletas[1].nombre;
-    localStorage.setItem("carritoLocalStorage",JSON.stringify(carritoLocalStorage));
+    localStorage.setItem("carritoLocalSrorage"+(bicicletas[1].marca),(bicicletas[1].nombre));
     
 };
 
@@ -141,6 +139,7 @@ boton3.onclick = () => {
           </tr>
           `
     carrito.innerHTML += bicicleta3
+    localStorage.setItem("carritoLocalSrorage"+(bicicletas[2].marca),(bicicletas[2].nombre));
 };
 
 let boton4 = document.getElementById("boton-4")
@@ -154,6 +153,7 @@ boton4.onclick = () => {
   </tr>
     `
     carrito.innerHTML += bicicleta4
+    localStorage.setItem("carritoLocalSrorage"+(bicicletas[3].marca),(bicicletas[3].nombre));
 };
 
 
@@ -169,6 +169,7 @@ boton5.onclick = () => {
   </tr>
     `
     carrito.innerHTML += bicicleta5
+    localStorage.setItem("carritoLocalSrorage"+(bicicletas[4].marca),(bicicletas[4].nombre));
 }
 
 
@@ -184,6 +185,7 @@ vaciarCarrito.onclick = () => {
    
     `
     carrito.innerHTML -= vaciarCarrito
+
 }
 
 
