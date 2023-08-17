@@ -100,3 +100,16 @@ height: 4vb;
   width: 100%;
 }
 
+.estilo-dolar{
+  
+  font-size: 20px;
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+  width: 100%;
+  color: #e76f51;
+  background-color: #e9c46a;
+}
