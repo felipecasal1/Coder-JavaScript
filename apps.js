@@ -1,73 +1,38 @@
 
 
-
-let form = document.getElementById("form")
-let nombreUsuario = document.getElementById("nombre");
-let contrasenia = document.getElementById("contraseña");
-let edad = document.getElementById("edad");
-let botonEnviar = document.getElementById("enviar");
-let botonBorrar = document.getElementById("boton-borrar")
-
-botonBorrar.onclick = () => {
-    Swal.fire({
-        icon: 'success',
-        title: 'Los datos fueron eliminados Correctamente!',
-        text: 'Todo esta en perfecto estado!',
-
-    })
-}
+let botonRegistrar = document.getElementById("botonRegistrar")
+let zonaDeRegistro = document.getElementById("modalFormRegistrar")
+let cerrarFormRegistro = document.getElementById("btnCerrarForm")
 
 
-
-
-botonEnviar.onclick = () => {
-    if (nombreUsuario.value.length < 8) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Nombre de Usuario',
-            text: 'El nombre de usuario es menor a 8 caracteres!',
-
-        })
-
-
-    }
-}
-
-botonEnviar.onclick = () => {
-    if (contrasenia.value.length < 8) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Contraseña',
-            text: 'La contraseña es muy corta, es menor a 8 caracteres!',
-
-        })
-
-
-    }
-}
-
-
-
-
-
-
-
-form.addEventListener("submit", e => {
-
-    e.preventDefault()
-
-
-    localStorage.setItem("Nombre", nombreUsuario.value);
-
-
-    localStorage.setItem("contraseña", contrasenia.value);
-
-
-
-    localStorage.setItem("edad", edad.value);
-
+botonRegistrar.addEventListener("click", (e) => {
+    e.preventDefault
+    zonaDeRegistro.classList.add("mostrar-form")
 
 })
+
+cerrarFormRegistro.addEventListener("click", (e) =>{
+    e.preventDefault
+    zonaDeRegistro.classList.remove("mostrar-form")
+})
+
+
+
+let botonSesion = document.getElementById("botonSesion")
+let zonaDeSesion = document.getElementById("modalFormSesion")
+let cerrarFormSesion = document.getElementById("btnCerrarFormSesion")
+
+botonSesion.addEventListener("click", (e) => {
+    e.preventDefault
+    zonaDeSesion.classList.add("mostrar-form-sesion")
+})
+
+cerrarFormSesion.addEventListener("click", (e) =>{
+    e.preventDefault
+    zonaDeSesion.classList.remove("mostrar-form-sesion")
+})
+
+
 
 
 
@@ -89,7 +54,7 @@ let boton1 = document.getElementById("boton-1");
 
 boton1.onclick = () => {
 
-    
+
     let bicicleta1 = `
     <tr>
     <td >${bicicletas[0].nombre}</td>
@@ -98,9 +63,9 @@ boton1.onclick = () => {
     </tr>
     `
     carrito.innerHTML += bicicleta1
-    
-   
-    localStorage.setItem("carritoLocalSrorage"+(bicicletas[0].marca),(bicicletas[0].nombre));
+
+
+    localStorage.setItem("carritoLocalSrorage" + (bicicletas[0].marca), (bicicletas[0].nombre));
 
 };
 
@@ -119,8 +84,8 @@ boton2.onclick = () => {
           </tr>
           `
     carrito.innerHTML += bicicleta2
-    localStorage.setItem("carritoLocalSrorage"+(bicicletas[1].marca),(bicicletas[1].nombre));
-    
+    localStorage.setItem("carritoLocalSrorage" + (bicicletas[1].marca), (bicicletas[1].nombre));
+
 };
 
 
@@ -139,7 +104,7 @@ boton3.onclick = () => {
           </tr>
           `
     carrito.innerHTML += bicicleta3
-    localStorage.setItem("carritoLocalSrorage"+(bicicletas[2].marca),(bicicletas[2].nombre));
+    localStorage.setItem("carritoLocalSrorage" + (bicicletas[2].marca), (bicicletas[2].nombre));
 };
 
 let boton4 = document.getElementById("boton-4")
@@ -153,7 +118,7 @@ boton4.onclick = () => {
   </tr>
     `
     carrito.innerHTML += bicicleta4
-    localStorage.setItem("carritoLocalSrorage"+(bicicletas[3].marca),(bicicletas[3].nombre));
+    localStorage.setItem("carritoLocalSrorage" + (bicicletas[3].marca), (bicicletas[3].nombre));
 };
 
 
@@ -169,7 +134,7 @@ boton5.onclick = () => {
   </tr>
     `
     carrito.innerHTML += bicicleta5
-    localStorage.setItem("carritoLocalSrorage"+(bicicletas[4].marca),(bicicletas[4].nombre));
+    localStorage.setItem("carritoLocalSrorage" + (bicicletas[4].marca), (bicicletas[4].nombre));
 }
 
 
@@ -203,7 +168,8 @@ fetch("https://dolarapi.com/v1/dolares")
     .then(response => response.json())
     .then(response => {
 
-        let tablaDolarBlue = `
+        let tablaDolarBlue = 
+         `
             
           <div>
             Compra :${response[1].compra}
@@ -247,6 +213,15 @@ fetch("https://dolarapi.com/v1/dolares")
     });
 
 
+
+let btnCarrito = document.getElementById("carritoBtn")
+let modalCarrito = document.getElementById("sectionCarrito")
+
+btnCarrito.addEventListener("click", (e) => {
+    e.preventDefault
+    modalCarrito.classList.remove("carrito-sec")
+modalCarrito.classList.add("mostrar-carrito")
+})
 
 
 
