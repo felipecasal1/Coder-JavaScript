@@ -72,6 +72,24 @@ section {
 
 }
 
+.container-carrito{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vb;
+  opacity: 0;
+  display: none;
+}
+.container-carrito.active{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vb;
+  opacity: 1;
+
+}
+
+
 .carrito-sec{
   position: fixed;
   opacity: 0;

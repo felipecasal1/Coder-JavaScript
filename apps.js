@@ -1,5 +1,4 @@
 
-
 let botonRegistrar = document.getElementById("botonRegistrar")
 let zonaDeRegistro = document.getElementById("modalFormRegistrar")
 let cerrarFormRegistro = document.getElementById("btnCerrarForm")
@@ -11,9 +10,23 @@ botonRegistrar.addEventListener("click", (e) => {
 
 })
 
-cerrarFormRegistro.addEventListener("click", (e) =>{
+cerrarFormRegistro.addEventListener("click", (e) => {
     e.preventDefault
     zonaDeRegistro.classList.remove("mostrar-form")
+})
+
+
+let iconoCarrito = document.getElementById("carritoBtn")
+let containerCarrito = document.getElementById("containerCarrito")
+let cerrarCarrito = document.getElementById("btnCerrarCarrito")
+
+iconoCarrito.addEventListener("click", () =>{
+    containerCarrito.classList.add("active")
+
+})
+
+cerrarCarrito.addEventListener("click", () =>{
+    containerCarrito.classList.remove("active")
 })
 
 
@@ -27,7 +40,7 @@ botonSesion.addEventListener("click", (e) => {
     zonaDeSesion.classList.add("mostrar-form-sesion")
 })
 
-cerrarFormSesion.addEventListener("click", (e) =>{
+cerrarFormSesion.addEventListener("click", (e) => {
     e.preventDefault
     zonaDeSesion.classList.remove("mostrar-form-sesion")
 })
@@ -45,28 +58,25 @@ const bicicletas = [
     { nombre: "Bicicleta BMX", marca: "Sunn", precio: 300 },
 ]
 
-let carrito = document.getElementById("carrito");
-
 let boton1 = document.getElementById("boton-1");
+
+let carritoImpresion = []
 
 
 
 
 boton1.onclick = () => {
+    carritoImpresion.push(bicicletas[0])
 
-
-    let bicicleta1 = `
+    containerCarrito = containerCarritoNew
+    carritoImpresionNew=
+   `
     <tr>
-    <td >${bicicletas[0].nombre}</td>
-    <td>${bicicletas[0].precio}</td>
-    <td>${bicicletas[0].marca}</td>
-    </tr>
+    <td>${bicicletas[0]}<td>
+    <tr>
     `
-    carrito.innerHTML += bicicleta1
 
-
-    localStorage.setItem("carritoLocalSrorage" + (bicicletas[0].marca), (bicicletas[0].nombre));
-
+   
 };
 
 
@@ -168,8 +178,8 @@ fetch("https://dolarapi.com/v1/dolares")
     .then(response => response.json())
     .then(response => {
 
-        let tablaDolarBlue = 
-         `
+        let tablaDolarBlue =
+            `
             
           <div>
             Compra :${response[1].compra}
@@ -220,7 +230,7 @@ let modalCarrito = document.getElementById("sectionCarrito")
 btnCarrito.addEventListener("click", (e) => {
     e.preventDefault
     modalCarrito.classList.remove("carrito-sec")
-modalCarrito.classList.add("mostrar-carrito")
+    modalCarrito.classList.add("mostrar-carrito")
 })
 
 
